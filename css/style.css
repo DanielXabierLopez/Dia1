@@ -36,13 +36,13 @@ header {
 	background-color: #861c1c;
 }
 
-main {
-	flex: 1;
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
-footer {
-	background-color: #222;
-	color: white;
+main {
+	flex: 1;
 }
 
 .light {
@@ -53,28 +53,39 @@ footer {
 	font-weight: 700;
 }
 
-#site-title {
-	justify-content: left;
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 30px;
+	background-color: #861c1c;
 }
 
-.nav-bar {
-	justify-content: center;
-	max-width: 100%;
+#site-title {
+	margin: 0;
 }
 
 .nav-bar ul {
-	display: flex;
 	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	gap: 20px;
+}
+nav a {
+	text-decoration: none;
+	color: black;
 }
 
 #Masthead {
+	height: 80vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.Masthead > h1{
-	
+.Masthead>h1 {
+
 	text-align: center;
 }
 
@@ -89,14 +100,17 @@ footer {
 	justify-content: space-between;
 	flex-direction: row;
 }
+
 .boxIzq {
 	flex: 1;
 }
+
 .boxDch {
 	flex: 1;
 	width: 300px;
 	height: 600px;
 }
+
 .boxDch img {
 	width: 100%;
 	height: 100%;
@@ -119,21 +133,76 @@ footer {
 	border: 1px solid #e3ddd4;
 }
 
+.img-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+.img-item {
+	width: 200px;
+	height: 200px;
+
+}
+
+.img-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.site-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background-color: #222;
+	color: white;
+}
+
+.corazon {
+	display: inline-block;
+	animation : latido 1s infinite;
+}
+
+@keyframes latido {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.2);
+	}
+	50% {
+		transform: scale(1);
+	}
+	75% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
 @media (max-width: 800px) {
 	.flexbox-item:nth-child(3) {
 		background-color: yellow;
 		color: black;
 		order: -1;
-		
+
 	}
 }
+
 @media (max-width: 500px) {
-	
+
 	.Flex {
 		flex-direction: column;
 		align-items: flex-end;
 	}
-	
+
 	.flexbox-item {
 		width: 300px;
 	}
