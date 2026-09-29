@@ -1,0 +1,140 @@
+:root {
+	--background: #f7f4ee;
+	--surface: #ffffff;
+	--text: #263238;
+	--muted-text: #5f6b70;
+	--accent: #d95d39;
+	--accent-dark: #a94228;
+	--border: #e3ddd4;
+	--max-width: 1100px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #861c1c;
+}
+
+main {
+	flex: 1;
+}
+
+footer {
+	background-color: #222;
+	color: white;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+#site-title {
+	justify-content: left;
+}
+
+.nav-bar {
+	justify-content: center;
+	max-width: 100%;
+}
+
+.nav-bar ul {
+	display: flex;
+	list-style: none;
+}
+
+#Masthead {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Masthead > h1{
+	
+	text-align: center;
+}
+
+.Position {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.position-container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+.boxIzq {
+	flex: 1;
+}
+.boxDch {
+	flex: 1;
+	width: 300px;
+	height: 600px;
+}
+.boxDch img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.Flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 20px;
+}
+
+.flexbox-item {
+	flex: 1 1 calc(25% - 20px);
+	width: 100px;
+	height: 100px;
+	background-color: #f7f4ee;
+	border: 1px solid #e3ddd4;
+}
+
+@media (max-width: 800px) {
+	.flexbox-item:nth-child(3) {
+		background-color: yellow;
+		color: black;
+		order: -1;
+		
+	}
+}
+@media (max-width: 500px) {
+	
+	.Flex {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	
+	.flexbox-item {
+		width: 300px;
+	}
+}
